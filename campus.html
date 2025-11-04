@@ -4,38 +4,186 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Life | Insyirah Yasmin</title>
-  <link rel="stylesheet" href="index.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('img/bg.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      font-family: 'Georgia', 'Times New Roman', serif;
+    }
+
+    .container {
+      background-color: rgba(255, 245, 248, 0.92);
+      min-height: 100vh;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    header {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(219, 112, 147, 0.1);
+      border: 1px solid #ffe4ec;
+    }
+
+    header h1 {
+      color: #8b5a7c;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background-color: #fff;
+      padding: 12px 0;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(219, 112, 147, 0.1);
+      border: 1px solid #ffe4ec;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b5a7c;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #fff0f5;
+      color: #d94b7e;
+      transform: translateY(-2px);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .side_bar {
+      flex-basis: 25%;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(219, 112, 147, 0.15);
+      padding: 25px;
+      border: 1px solid #ffe4ec;
+      color: #8b5a7c;
+      text-align: center;
+    }
+
+    .side_bar h3 {
+      color: #d94b7e;
+      margin-bottom: 10px;
+    }
+
+    .body_area {
+      flex-basis: 73%;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(219, 112, 147, 0.15);
+      padding: 30px;
+      border: 1px solid #ffe4ec;
+      color: #8b5a7c;
+    }
+
+    .body_area h2 {
+      color: #d94b7e;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ffb6c1;
+      padding-bottom: 8px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(219, 112, 147, 0.15);
+      border: 1px solid #ffe4ec;
+    }
+
+    figcaption {
+      text-align: center;
+      margin-top: 8px;
+      color: #b08e9d;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ffffff;
+      margin-top: 30px;
+      padding: 15px;
+      border-radius: 15px;
+      color: #b08e9d;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(219, 112, 147, 0.1);
+      border: 1px solid #ffe4ec;
+    }
+
+    @media (max-width: 768px) {
+      .content { flex-direction: column; }
+      .side_bar, .body_area { flex-basis: 100%; }
+      .gallery { flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>My Personal Website</h1>
-    <nav>
-      <a href="biodata.html">Biodata</a>
-      <a href="hobbies.html">Hobbies</a>
-      <a href="campus.html" class="active">Campus Life</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <h1>My Personal Website</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="campus.html" class="active">Campus Life</a>
+      </nav>
+    </header>
 
-  <main>
-    <h2>My Campus Life</h2>
-    <section class="gallery">
-      <figure>
-        <img src="img/event1.jpg" alt="Campus Event">
-        <figcaption>Joining UTHM cultural night</figcaption>
-      </figure>
-      <figure>
-        <img src="img/friends.jpg" alt="Friends">
-        <figcaption>Hanging out with my coursemates</figcaption>
-      </figure>
-      <figure>
-        <img src="img/trip.jpg" alt="Trip">
-        <figcaption>Industrial visit to Johor Bahru</figcaption>
-      </figure>
-    </section>
-  </main>
+    <div class="content">
+      <div class="side_bar">
+        <h3>Life at UTHM</h3>
+        <p>Every moment on campus has been filled with learning, laughter, and friendship 💕</p>
+      </div>
 
-  <footer>
-    <p>© 2025 Insyirah Yasmin | All rights reserved</p>
-  </footer>
+      <div class="body_area">
+        <h2>My Campus Life</h2>
+        <div class="gallery">
+          <figure>
+            <img src="img/event1.jpg" alt="Event 1">
+            <figcaption>Joining UTHM Cultural Night 🌸</figcaption>
+          </figure>
+          <figure>
+            <img src="img/friends.jpg" alt="Friends">
+            <figcaption>Hanging out with my coursemates 💕</figcaption>
+          </figure>
+          <figure>
+            <img src="img/trip.jpg" alt="Trip">
+            <figcaption>Industrial visit to Johor Bahru 🚗</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Insyirah Yasmin | Designed with 💖 HTML & CSS
+    </footer>
+  </div>
 </body>
 </html>

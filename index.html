@@ -3,193 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insyirah's Personal Website</title>
-
-  <style>
-    /* 🌷 General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9fafb;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* 🌈 Layout Container */
-    .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      width: 100%;
-    }
-
-    /* 🌸 Logo/Header Section */
-    .logo {
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      color: white;
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 30px 0;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    /* 🪷 Navigation Bar */
-    .navigation {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .navigation a {
-      text-decoration: none;
-      color: #2b3a55;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      padding: 8px 16px;
-      border-radius: 20px;
-    }
-
-    .navigation a:hover {
-      background-color: #66a6ff;
-      color: white;
-    }
-
-    /* 🌿 Header Banner */
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url('img/banner.jpg') center/cover no-repeat;
-      min-height: 180px;
-      color: white;
-      font-size: 1.8rem;
-      font-weight: 600;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-      margin-top: 10px;
-      border-radius: 10px;
-      width: 90%;
-      margin-inline: auto;
-    }
-
-    /* 🌼 Main Content Area */
-    .content {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 20px;
-      margin: 30px auto;
-      width: 90%;
-    }
-
-    .side_bar {
-      flex-basis: 25%;
-      background-color: #e3f2fd;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .side_bar h3 {
-      color: #2b3a55;
-      margin-bottom: 10px;
-    }
-
-    .body_area {
-      flex-basis: 70%;
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .body_area h2 {
-      color: #2b3a55;
-      margin-bottom: 15px;
-    }
-
-    /* 🌷 Footer */
-    .footer {
-      background-color: #2b3a55;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: auto;
-      font-size: 0.95rem;
-      letter-spacing: 0.5px;
-    }
-
-    /* 🌸 Responsive Design */
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-      }
-      .side_bar, .body_area {
-        flex-basis: 100%;
-      }
-      .navigation {
-        flex-wrap: wrap;
-      }
-    }
-  </style>
+  <title>Insyirah Yasmin | Personal Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="container">
+    <header>Welcome to My Personal Website 🌸</header>
 
-    <!-- 🌸 Logo Section -->
-    <div class="logo">
-      Insyirah Yasmin 🌼
-    </div>
-
-    <!-- 🪷 Navigation Bar -->
-    <div class="navigation">
+    <nav>
       <a href="biodata.html">Biodata</a>
       <a href="hobbies.html">Hobbies</a>
       <a href="campus.html">Campus Life</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    </nav>
 
-    <!-- 🌿 Header Section -->
-    <div class="header">
-      Welcome to My Personal Website 💖
-    </div>
+    <main>
+      <h2>Hello, I'm Insyirah Yasmin 🌷</h2>
+      <p style="text-align:center; max-width:700px; margin:auto;">
+        I’m a <strong>Software Engineering student at UTHM</strong> with a passion for web design, 
+        creativity, and coding. Explore my site to know more about me — my hobbies, 
+        campus life, and my journey as a tech enthusiast 💻✨.
+      </p>
+    </main>
 
-    <!-- 🌼 Content Section -->
-    <div class="content">
-      <div class="side_bar">
-        <h3>About Me</h3>
-        <p>Hi! I’m <strong>Insyirah Yasmin</strong>, a Software Engineering student at UTHM. I love designing, coding, and exploring creative web layouts 💻✨.</p>
-      </div>
-
-      <div class="body_area">
-        <h2>My Goals for 2025 🌟</h2>
-        <ul>
-          <li>Graduate with honours 🎓</li>
-          <li>Master advanced web development 🌐</li>
-          <li>Travel to Thailand 🏝️</li>
-        </ul>
-        <p style="margin-top:15px;">Thank you for visiting my site! You can browse my hobbies, campus life, and contact information using the navigation bar above 💌</p>
-      </div>
-    </div>
-
-    <!-- 🌸 Footer -->
-    <div class="footer">
-      © 2025 Insyirah Yasmin | Designed with 💖 using HTML & CSS
-    </div>
-
+    <footer>© 2025 Insyirah Yasmin | Designed with 💖 using HTML & CSS</footer>
   </div>
 </body>
 </html>

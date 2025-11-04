@@ -1,315 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTHM Student Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Georgia', 'Times New Roman', 'Helvetica', serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTHM Student Profile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', 'Times New Roman', 'Helvetica', serif;
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+      background-image: url('img/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
 
-        body {
-            background-image: url('img/bg.jpg'); 
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-        }
+    .container {
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(240, 248, 255, 0.92); /* Soft blue background */
+      min-height: 100vh;
+      width: 100%;
+      padding: 20px;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(255, 245, 248, 0.92);
-            min-height: 100vh;
-            width: 100%;
-            padding: 20px;
-        }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      min-height: 80px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+      border: 1px solid #dce9f9;
+    }
 
-        .logo {
-            display: flex;
-            flex-direction: row;
-            background-color: #ffffff;
-            min-height: 80px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(219, 112, 147, 0.1);
-            border: 1px solid #ffe4ec;
-        }
+    .logo img {
+      max-height: 60px;
+      width: auto;
+    }
 
-        .logo img {
-            max-height: 60px;
-            width: auto;
-        }
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      background-color: #ffffff;
+      min-height: 50px;
+      margin-top: 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+      border: 1px solid #dce9f9;
+    }
 
-        .navigation {
-            display: flex;
-            flex-direction: row;
-            background-color: #ffffff;
-            min-height: 50px;
-            margin-top: 20px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(219, 112, 147, 0.1);
-            border: 1px solid #ffe4ec;
-        }
+    .navigation a {
+      text-decoration: none;
+      color: #3a537b;
+      font-weight: 500;
+      padding: 12px 24px;
+      transition: all 0.3s ease;
+      border-radius: 15px;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+    }
 
-        .navigation a {
-            text-decoration: none;
-            color: #8b5a7c;
-            font-weight: 500;
-            padding: 12px 24px;
-            transition: all 0.3s ease;
-            border-radius: 15px;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-        }
+    .navigation a:hover {
+      color: #4a90e2;
+      background-color: #f0f8ff;
+      transform: translateY(-2px);
+    }
 
-        .navigation a:hover {
-            color: #d94b7e;
-            background-color: #fff0f5;
-            transform: translateY(-2px);
-        }
+    .header {
+      display: flex;
+      flex-direction: column;
+      min-height: 120px;
+      background-color: #ffffff;
+      margin-top: 20px;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(74, 144, 226, 0.15);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #dce9f9;
+    }
 
-        .header {
-            display: flex;
-            flex-direction: column;
-            min-height: 120px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-top: 20px;
-            border-radius: 25px;
-            box-shadow: 0 4px 20px rgba(219, 112, 147, 0.15);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #ffe4ec;
-        }
+    .header h1 {
+      font-size: 2.2rem;
+      color: #3a537b;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
 
-        .header h1 {
-            font-size: 2.2rem;
-            color: #8b5a7c;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
+    .header p {
+      color: #6e89b0;
+      font-size: 1.2rem;
+    }
 
-        .header p {
-            color: #b08e9d;
-            font-size: 1.2rem;
-        }
+    .content {
+      display: flex;
+      flex-direction: row;
+      min-height: 400px;
+      background-color: transparent;
+      margin-top: 20px;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-        .content {
-            display: flex;
-            flex-direction: row;
-            min-height: 400px;
-            background-color: transparent;
-            margin-top: 20px;
-            justify-content: space-between;
-            gap: 20px;
-        }
+    .side_bar {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      flex-basis: 25%;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(74, 144, 226, 0.15);
+      padding: 30px;
+      color: #3a537b;
+      line-height: 1.7;
+      border: 1px solid #dce9f9;
+    }
 
-        .side_bar {
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffff;
-            flex-basis: 25%;
-            border-radius: 25px;
-            box-shadow: 0 4px 20px rgba(219, 112, 147, 0.15);
-            padding: 30px;
-            color: #8b5a7c;
-            line-height: 1.7;
-            border: 1px solid #ffe4ec;
-        }
+    .side_bar h3 {
+      color: #4a90e2;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #bcd4f9;
+      font-size: 1.4rem;
+      text-align: center;
+    }
 
-        .side_bar h3 {
-            color: #d94b7e;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #ffb6c1;
-            font-size: 1.4rem;
-            text-align: center;
-        }
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
 
-        .profile-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
+    .profile-table td {
+      padding: 12px 8px;
+      border-bottom: 1px solid #dce9f9;
+      vertical-align: top;
+    }
 
-        .profile-table td {
-            padding: 12px 8px;
-            border-bottom: 1px solid #ffe4ec;
-            vertical-align: top;
-        }
+    .profile-table tr:last-child td {
+      border-bottom: none;
+    }
 
-        .profile-table tr:last-child td {
-            border-bottom: none;
-        }
+    .profile-label {
+      font-weight: 600;
+      color: #3a537b;
+      width: 35%;
+    }
 
-        .profile-label {
-            font-weight: 600;
-            color: #8b5a7c;
-            width: 35%;
-        }
+    .profile-value {
+      color: #6e89b0;
+    }
 
-        .profile-value {
-            color: #b08e9d;
-        }
+    .body_area {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      flex-basis: 73%;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(74, 144, 226, 0.15);
+      padding: 30px;
+      color: #3a537b;
+      line-height: 1.7;
+      border: 1px solid #dce9f9;
+    }
 
-        .body_area {
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffff;
-            flex-basis: 73%;
-            border-radius: 25px;
-            box-shadow: 0 4px 20px rgba(219, 112, 147, 0.15);
-            padding: 30px;
-            color: #8b5a7c;
-            line-height: 1.7;
-            border: 1px solid #ffe4ec;
-        }
+    .body_area h3 {
+      color: #4a90e2;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #bcd4f9;
+      font-size: 1.4rem;
+    }
 
-        .body_area h3 {
-            color: #d94b7e;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #ffb6c1;
-            font-size: 1.4rem;
-        }
+    .section {
+      margin-bottom: 30px;
+    }
 
-        .section {
-            margin-bottom: 30px;
-        }
+    .section p {
+      margin-bottom: 15px;
+      text-align: justify;
+      color: #6e89b0;
+    }
 
-        .section p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+    .section ul {
+      margin-left: 25px;
+      margin-bottom: 15px;
+      color: #6e89b0;
+    }
 
-        .section ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
+    .section li {
+      margin-bottom: 8px;
+    }
 
-        .section li {
-            margin-bottom: 8px;
-            color: #b08e9d;
-        }
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      margin-top: 20px;
+      min-height: 70px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+      color: #6e89b0;
+      font-size: 1rem;
+      border: 1px solid #dce9f9;
+    }
 
-        .footer {
-            display: flex;
-            flex-direction: row;
-            background-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            min-height: 70px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(219, 112, 147, 0.1);
-            color: #b08e9d;
-            font-size: 1rem;
-            border: 1px solid #ffe4ec;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-            }
-            
-            .side_bar, .body_area {
-                flex-basis: 100%;
-            }
-            
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
-            .profile-table {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .content { flex-direction: column; }
+      .side_bar, .body_area { flex-basis: 100%; }
+      .header h1 { font-size: 1.8rem; }
+      .header p { font-size: 1rem; }
+      .profile-table { font-size: 0.9rem; }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="img/logo.png" alt="UTHM Logo">
-        </div>
-
-        <div class="navigation">
-            <a href="index.html">Home</a>
-            <a href="biodata.html">Biodata</a>
-            <a href="hobbies.html">Hobbies</a>
-            <a href="campus.html">Campus Life</a>
-        </div>
-
-        <div class="header">
-            <h1>Student Profile</h1>
-            <p>Universiti Tun Hussein Onn Malaysia</p>
-        </div>
-
-        <div class="content">
-            <div class="side_bar">
-                <h3>Quick Profile</h3>
-                <table class="profile-table">
-                    <tr>
-                        <td class="profile-label">Name:</td>
-                        <td class="profile-value">Insyirah Yasmin Mahadi</td>
-                    </tr>
-                    <tr>
-                        <td class="profile-label">Student ID:</td>
-                        <td class="profile-value">AI230040</td>
-                    </tr>
-                    <tr>
-                        <td class="profile-label">Faculty:</td>
-                        <td class="profile-value">FSKTM</td>
-                    </tr>
-                    <tr>
-                        <td class="profile-label">Program:</td>
-                        <td class="profile-value">Software Engineering</td>
-                    </tr>
-                    <tr>
-                        <td class="profile-label">Year:</td>
-                        <td class="profile-value">Year 3</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="body_area">
-                <div class="section" id="biodata">
-                    <h3>Biodata</h3>
-                    <p>I am a third Software Engineering student at Universiti Tun Hussein Onn Malaysia. My passion for technology and problem-solving led me to pursue this field, and I'm constantly exploring new programming languages and development frameworks.</p>
-                </div>
-
-                <div class="section" id="hobbies">
-                    <h3>Hobbies & Interests</h3>
-                    <ul>
-                        <li>Baking</li>
-                        <li>Travelling</li>
-                        <li>Sleeping</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            &copy; Insyirah Yasmin 2025
-        </div>
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo.png" alt="UTHM Logo">
     </div>
+
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="biodata.html">Biodata</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="campus.html">Campus Life</a>
+    </div>
+
+    <div class="header">
+      <h1>Student Profile</h1>
+      <p>Universiti Tun Hussein Onn Malaysia</p>
+    </div>
+
+    <div class="content">
+      <div class="side_bar">
+        <h3>Quick Profile</h3>
+        <table class="profile-table">
+          <tr><td class="profile-label">Name:</td><td class="profile-value">Insyirah Yasmin Mahadi</td></tr>
+          <tr><td class="profile-label">Student ID:</td><td class="profile-value">AI230040</td></tr>
+          <tr><td class="profile-label">Faculty:</td><td class="profile-value">FSKTM</td></tr>
+          <tr><td class="profile-label">Program:</td><td class="profile-value">Software Engineering</td></tr>
+          <tr><td class="profile-label">Year:</td><td class="profile-value">Year 3</td></tr>
+        </table>
+      </div>
+
+      <div class="body_area">
+        <div class="section" id="biodata">
+          <h3>Biodata</h3>
+          <p>I am a third-year Software Engineering student at Universiti Tun Hussein Onn Malaysia. My passion for technology and problem-solving led me to pursue this field, and I’m constantly exploring new programming languages and development frameworks.</p>
+        </div>
+
+        <div class="section" id="hobbies">
+          <h3>Hobbies & Interests</h3>
+          <ul>
+            <li>Baking</li>
+            <li>Travelling</li>
+            <li>Sleeping</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Insyirah Yasmin | Designed with 💙 HTML & CSS
+    </div>
+  </div>
 </body>
 </html>
